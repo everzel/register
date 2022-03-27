@@ -1,3 +1,18 @@
 .cdx-register__block_name {
     margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
+.cdx-register {
+    box-sizing: border-box;
+    padding: 30px;
+    background: #F7FAFE;
+    border-radius: 15px;
+}
+
+.cdx-register__title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 38px;
+}
+

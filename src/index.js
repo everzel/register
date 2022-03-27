@@ -52,7 +52,8 @@ export default class Register {
       wrapper: 'cdx-register',
       block: 'cdx-register__block',
       blockName: 'cdx-register__block_name',
-      blockInput: 'cdx-register__block_input'
+      blockInput: 'cdx-register__block_input',
+      title: 'cdx-register__title'
     };
   }
 
@@ -81,6 +82,13 @@ export default class Register {
     const { when, where, forWhom, cost, how, next, url } = this.data;
 
     this.nodes.wrapper = this.make('div', [this.CSS.baseClass, this.CSS.wrapper]);
+
+    this.nodes.wrapper.appendChild(
+      this.make('div', [ this.CSS.title ], {
+        contentEditable: false,
+        innerHTML: 'Картка реєстрації'
+      })
+    );
 
     this.nodes.when = this.make('div', [this.CSS.blockInput, this.CSS.input], {
       contentEditable: true,
@@ -159,7 +167,7 @@ export default class Register {
     });
 
     this.nodes.wrapper.appendChild(this.make('div', [ this.CSS.blockName ], {
-      innerHTML: 'URL'
+      innerHTML: 'URL для кнопки'
     }));
 
     this.nodes.wrapper.appendChild(this.nodes.url);

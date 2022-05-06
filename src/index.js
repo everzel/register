@@ -186,9 +186,7 @@ export default class Register {
            savedData.forWhom.trim() !== '' &&
            savedData.cost.trim() !== '' &&
            savedData.how.trim() !== '' &&
-           savedData.next.trim() !== '' &&
-           savedData.url.trim() !== '' &&
-           this.isValidHttpUrl(savedData.url.trim());
+           savedData.next.trim() !== '';
   }
 
   /**
